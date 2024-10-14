@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginated User List</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody id="user-table-body">
+            <!-- User data will be inserted here -->
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button id="prev-btn" class="page-btn">Previous</button>
+        <button id="next-btn" class="page-btn">Next</button>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
