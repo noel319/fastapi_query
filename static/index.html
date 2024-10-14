@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paginated User List</title>
+    <title>Paginated User List with Search</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 
+    <!-- Search Form -->
+    <div class="search-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number">
+        
+        <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Table to Display Results -->
     <table>
         <thead>
             <tr>
@@ -21,6 +36,7 @@
         </tbody>
     </table>
 
+    <!-- Pagination Buttons -->
     <div class="pagination">
         <button id="prev-btn" class="page-btn">Previous</button>
         <button id="next-btn" class="page-btn">Next</button>

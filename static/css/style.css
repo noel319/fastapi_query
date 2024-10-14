@@ -21,3 +21,18 @@ th {
     border: 1px solid #ddd;
     cursor: pointer;
 }
+.search-form {
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.search-form input {
+    padding: 8px;
+    width: 30%;
+}
+#search-btn {
+    padding: 10px 15px;
+    cursor: pointer;
+}
