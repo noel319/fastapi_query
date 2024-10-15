@@ -52,18 +52,18 @@
         </h2>
         <div class="main-section__content">
             <div class="contact__form-cont">
-                <form class="contact__form">
+                <form class="contact__form" id="searchForm">
                     <div class="contact__form-field">
                         <label for="name" class="contact__form-field-label">Name</label>
-                        <input placeholder="Enter Search Name" type="text" class="contact__form-field-input" />
+                        <input id="name" placeholder="Enter Search Name" type="text" class="contact__form-field-input" />
                     </div>
                     <div class="contact__form-field">
                         <label for="name" class="contact__form-field-label">Email</label>
-                        <input placeholder="Enter Search Email" type="text" class="contact__form-field-input" />
+                        <input id="email" placeholder="Enter Search Email" type="text" class="contact__form-field-input" />
                     </div>
                     <div class="contact__form-field">
                         <label for="name" class="contact__form-field-label">Phone number</label>
-                        <input placeholder="Enter Search Phone number" type="text" class="contact__form-field-input" />
+                        <input id ="phone_number" placeholder="Enter Search Phone number" type="text" class="contact__form-field-input" />
                     </div>
                     <button type="submit" class="contact__form-submit">Search</button>
                 </form>
@@ -126,11 +126,20 @@
                     const userDiv = document.createElement("div");
                     userDiv.className = "user-result";
                     userDiv.innerHTML = `
-                        <p>Name: ${user.name}</p>
+                        <p>Name: ${user.full_name}</p>
                         <p>Email: ${user.email}</p>
                         <p>Phone Number: ${user.phone_number}</p>
-                        <p>Source_data:${user.source_data}</p>
+                        <h3>Source Data:</h3>
+                            <ul id="source-data-${user._id}"></ul>
                     `;
+                    // Create a list for source_data
+                const sourceDataList = user.source_data.map(data => `
+                    <li>ID: ${data.id}, Database: ${data.database}, Collection: ${data.collection}</li>
+                `).join("");
+
+                // Insert the source data into the user div
+                userDiv.querySelector(`#source-data-${user._id}`).innerHTML = sourceDataList;
+
                     resultsDiv.appendChild(userDiv);
                 });
             }
