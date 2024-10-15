@@ -1,47 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paginated User List with Search</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+  <title>Search MongoDB</title>
+  <meta name="description" content="Search MongoDB" />
 </head>
+
 <body>
-
-    <!-- Search Form -->
-    <div class="search-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
-        
-        <label for="phone_number">Phone Number:</label>
-        <input type="text" id="phone_number" name="phone_number">
-        
-        <button id="search-btn">Search</button>
+  <header class="main-header">
+    <div class="main-header__logo-container">
+      <div class="main-header__logo-img-cont">
+        <img
+          src="./img/logo.png"
+          alt="logo Image" class="main-header__logo-img" />
+      </div>
+      <h4 class="main-header__logo-text">SMK Consult</h4>
     </div>
-
-    <!-- Table to Display Results -->
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-            </tr>
-        </thead>
-        <tbody id="user-table-body">
-            <!-- User data will be inserted here -->
-        </tbody>
-    </table>
-
-    <!-- Pagination Buttons -->
-    <div class="pagination">
-        <button id="prev-btn" class="page-btn">Previous</button>
-        <button id="next-btn" class="page-btn">Next</button>
+    <nav class="main-header__navigation">
+      <ul class="main-header__navigation-links">
+        <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
+        <li class="main-header__navigation-link"><a href="./index.html#about"> Email </a></li>
+        <li class="main-header__navigation-link">
+          <a href="./index.html#projects"> Phone number </a>
+        </li>        
+      </ul>
+    </nav>    
+    <!-- <button class="btn btn-theme btn-sm">Download CV</button> -->
+  </header>
+  <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
+  <div class="themeClrSelector">
+    <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
+    <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
+      class="themeClrSelector__img" />
+  </div>
+  <!---->   
+  <section id="search" class="contact main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary">
+        <span class="heading-secondary__sm"> Search Personal Data </span>
+        <span class="heading-secondary__main">
+          Enter your search key in the inputbox and click the search button.
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="contact__form-cont">
+          <form class="contact__form">
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Name</label>
+              <input placeholder="Enter Search Name" type="text" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Email</label>
+              <input placeholder="Enter Search Email" type="text" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Phone number</label>
+              <input placeholder="Enter Search Phone number" type="text" class="contact__form-field-input" />
+            </div>
+            <button type="submit" class="contact__form-submit">Search</button>
+          </form>
+          <div class="contact__form-visual"></div>
+        </div>
+      </div>
     </div>
-
-    <script src="/static/js/script.js"></script>
+  </section>
+  <footer class="main-footer">
+    <div class="main-footer__upper">
+      <div class="main-container">
+        <ul class="main-footer__links">
+          <li class="main-footer__link">
+            <a href="./index.html">Name</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#about">Email</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#projects">Phone number</a>
+          </li>          
+        </ul>
+        <div class="main-footer__mid-line"></div>        
+      </div>
+    </div>   
+  </footer>
+  <script src="./script.js"></script>
 </body>
+
 </html>
