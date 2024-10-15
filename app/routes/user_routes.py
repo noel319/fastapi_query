@@ -7,13 +7,11 @@ router = APIRouter()
 
 # MongoDB connection
 client = AsyncIOMotorClient('mongodb://localhost:27017')
-db = client['your_db_name']
-collection = db['your_collection_name']
+db = client['meta']
+collection = db['personal']
 
 @router.get("/users", response_model=List[User])
 async def get_users(
-    skip: int = 0,
-    limit: int = 10,
     email: Optional[str] = None,
     phone_number: Optional[str] = None,
     name: Optional[str] = None
@@ -27,7 +25,10 @@ async def get_users(
     if name:
         query['name'] = name
     
-    # Perform the query
-    cursor = collection.find(query, {"_id": 0, "name": 1, "email": 1, "phone_number": 1})
-    users = await cursor.skip(skip).limit(limit).to_list(length=limit)
+    # Perform the query without projection to get all fields
+    cursor = collection.find(query)
+    
+    # Convert the cursor to a list of dictionaries
+    users = await cursor.to_list(length=None)
+    
     return users

@@ -2,95 +2,144 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
-  <title>Search MongoDB</title>
-  <meta name="description" content="Search MongoDB" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+    <title>Search MongoDB</title>
+    <meta name="description" content="Search MongoDB" />
 </head>
 
 <body>
-  <header class="main-header">
+<header class="main-header">
     <div class="main-header__logo-container">
-      <div class="main-header__logo-img-cont">
-        <img
-          src="./img/logo.png"
-          alt="logo Image" class="main-header__logo-img" />
-      </div>
-      <h4 class="main-header__logo-text">SMK Consult</h4>
+        <div class="main-header__logo-img-cont">
+            <img
+                src="./static/img/logo.png"
+                alt="logo Image" class="main-header__logo-img" />
+        </div>
+            <h4 class="main-header__logo-text">SMK Consult</h4>
     </div>
     <nav class="main-header__navigation">
-      <ul class="main-header__navigation-links">
-        <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
-        <li class="main-header__navigation-link"><a href="./index.html#about"> Email </a></li>
-        <li class="main-header__navigation-link">
-          <a href="./index.html#projects"> Phone number </a>
-        </li>        
-      </ul>
+        <ul class="main-header__navigation-links">
+            <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
+            <li class="main-header__navigation-link"><a href="./index.html#about"> Email </a></li>
+            <li class="main-header__navigation-link">
+                <a href="./index.html#projects"> Phone number </a>
+            </li>        
+        </ul>
     </nav>    
     <!-- <button class="btn btn-theme btn-sm">Download CV</button> -->
-  </header>
-  <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
-  <div class="themeClrSelector">
+</header>
+<!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
+<div class="themeClrSelector">
     <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
     <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
-      class="themeClrSelector__img" />
-  </div>
-  <!---->   
-  <section id="search" class="contact main-section">
+        class="themeClrSelector__img" />
+</div>
+<!---->   
+<section id="search" class="contact main-section">
     <div class="main-container">
-      <h2 class="heading-secondary">
-        <span class="heading-secondary__sm"> Search Personal Data </span>
-        <span class="heading-secondary__main">
-          Enter your search key in the inputbox and click the search button.
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="contact__form-cont">
-          <form class="contact__form">
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Name</label>
-              <input placeholder="Enter Search Name" type="text" class="contact__form-field-input" />
+        <h2 class="heading-secondary">
+            <span class="heading-secondary__sm"> Search Personal Data </span>
+            <span class="heading-secondary__main">
+            Enter your search key in the inputbox and click the search button.
+            </span>
+        </h2>
+        <div class="main-section__content">
+            <div class="contact__form-cont">
+                <form class="contact__form">
+                    <div class="contact__form-field">
+                        <label for="name" class="contact__form-field-label">Name</label>
+                        <input placeholder="Enter Search Name" type="text" class="contact__form-field-input" />
+                    </div>
+                    <div class="contact__form-field">
+                        <label for="name" class="contact__form-field-label">Email</label>
+                        <input placeholder="Enter Search Email" type="text" class="contact__form-field-input" />
+                    </div>
+                    <div class="contact__form-field">
+                        <label for="name" class="contact__form-field-label">Phone number</label>
+                        <input placeholder="Enter Search Phone number" type="text" class="contact__form-field-input" />
+                    </div>
+                    <button type="submit" class="contact__form-submit">Search</button>
+                </form>
+                <div class="contact__form-visual"></div>
             </div>
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Email</label>
-              <input placeholder="Enter Search Email" type="text" class="contact__form-field-input" />
-            </div>
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Phone number</label>
-              <input placeholder="Enter Search Phone number" type="text" class="contact__form-field-input" />
-            </div>
-            <button type="submit" class="contact__form-submit">Search</button>
-          </form>
-          <div class="contact__form-visual"></div>
         </div>
-      </div>
     </div>
-  </section>
-  <footer class="main-footer">
+    <div id="results">Output Source Data</div>
+</section>
+<footer class="main-footer">
     <div class="main-footer__upper">
-      <div class="main-container">
-        <ul class="main-footer__links">
-          <li class="main-footer__link">
-            <a href="./index.html">Name</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#about">Email</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#projects">Phone number</a>
-          </li>          
-        </ul>
-        <div class="main-footer__mid-line"></div>        
-      </div>
+        <div class="main-container">
+            <ul class="main-footer__links">
+                <li class="main-footer__link">
+                    <a href="./index.html">Name</a>
+                </li>
+                <li class="main-footer__link">
+                    <a href="./index.html#about">Email</a>
+                </li>
+                <li class="main-footer__link">
+                    <a href="./index.html#projects">Phone number</a>
+                </li>          
+            </ul>
+            <div class="main-footer__mid-line"></div>        
+        </div>
     </div>   
-  </footer>
-  <script src="./script.js"></script>
+</footer>
+<script src="./static/js/script.js"></script>
+<script>
+    document.getElementById("searchForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone_number = document.getElementById("phone_number").value;
+
+        // Build the query parameters
+        const params = new URLSearchParams();
+        if (name) params.append("name", name);
+        if (email) params.append("email", email);
+        if (phone_number) params.append("phone_number", phone_number);
+
+        // Send a GET request to the /users endpoint
+        try {
+            const response = await fetch(`/users?${params.toString()}`);
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            const users = await response.json();
+
+            // Display the results
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = ""; // Clear previous results
+
+            if (users.length === 0) {
+                resultsDiv.innerHTML = "<p>No users found.</p>";
+            } else {
+                users.forEach(user => {
+                    const userDiv = document.createElement("div");
+                    userDiv.className = "user-result";
+                    userDiv.innerHTML = `
+                        <p>Name: ${user.name}</p>
+                        <p>Email: ${user.email}</p>
+                        <p>Phone Number: ${user.phone_number}</p>
+                        <p>Source_data:${user.source_data}</p>
+                    `;
+                    resultsDiv.appendChild(userDiv);
+                });
+            }
+        } catch (error) {
+            console.error("There was a problem with the fetch operation:", error);
+            document.getElementById("results").innerHTML = "<p>Error fetching users.</p>";
+        }
+    });
+</script>
 </body>
 
 </html>
